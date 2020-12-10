@@ -16,6 +16,9 @@ public class loginWithEmailPagePFAbstractPO extends AbstractPage{
     @FindBy(xpath = "//label[@id=\"id_email_status_dwfrm_loyaltyinclude_email\"]")
     private WebElement labelErrMessage;
 
+    @FindBy(xpath="//*[@id=\"cboxClose\"]")
+    private WebElement closeBox;
+
     public loginWithEmailPagePFAbstractPO(WebDriver driver){super(driver);}
 
     public loginWithEmailPagePFAbstractPO openPage()
@@ -25,8 +28,8 @@ public class loginWithEmailPagePFAbstractPO extends AbstractPage{
                 .until(CustomConditions.jQueryAJAXsCompleted());
         return this;
     }
-    public loginWithEmailPagePFAbstractPO inputMail(String mail)
-    {
+    public loginWithEmailPagePFAbstractPO inputMail(String mail) throws InterruptedException {
+        closeBox.click();
         loginInput.sendKeys(mail);
         return this;
     }
