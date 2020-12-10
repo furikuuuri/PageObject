@@ -39,7 +39,7 @@ public class ShoppingCartPagePFAbstractPO extends  AbstractPage{
     {
         try {
 
-            System.out.println(acceptOrderButton.size());
+
             if (acceptOrderButton.size()>0) {
                 return false;
             }
