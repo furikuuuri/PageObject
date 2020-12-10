@@ -20,7 +20,7 @@ public class WebDriverSeleniumTest {
     private WebDriver driver;
     private boolean isPlacingAnOrderButtonAvailable=false;
     private boolean isMailValid=false;
-    private String mail="123";
+    private String mail="maxim03nock@mail.ru";
 
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
