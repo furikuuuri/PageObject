@@ -34,7 +34,7 @@ public class loginWithEmailPagePFAbstractPO extends AbstractPage{
         return this;
     }
     public boolean checkLabelErrMessage() throws InterruptedException {
-        Thread.sleep(500);
+
         CustomConditions.waitWebElementLocatedBy(driver, By.xpath("//label[@id=\"id_email_status_dwfrm_loyaltyinclude_email\"]"));
         System.out.println(labelErrMessage.getText());
         System.out.println(labelErrMessage.getText().equals("Пожалуйста, введите свой E-mail"));

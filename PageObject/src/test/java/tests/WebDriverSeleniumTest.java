@@ -44,7 +44,7 @@ public class WebDriverSeleniumTest {
                 .openPage()
                 .inputMail(mail)
                 .checkLabelErrMessage();
-        Thread.sleep(2000);
+        
 
         Assert.assertTrue(isMailValid,"Mail is not valid");
     }
